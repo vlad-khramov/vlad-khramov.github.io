@@ -13,15 +13,31 @@
             color: var(--bs-body-color);
             margin-left: 0 !important;
         }
+
+        @media (min-width: 0px) {
+            img.thumb-post {
+                object-fit: none; /* Do not scale the image */
+                width: 100%;
+                max-height: 288px;
+            }
+        }
+
+        @media (min-width: 576px) {
+            img.thumb-post {
+                object-fit: fill; /* Do not scale the image */
+                width: auto;
+                max-height: none;
+            }
+        }
     </style>
 </head>
 <body>
-<section class="py-5 container font-monospace" style="max-width: 768px;">
+<section class="py-2 py-sm-5 container font-monospace" style="max-width: 768px;">
     <div class="row">
         <div class="col-sm-4 col-xs-12 pb-3">
-            <img src="images/me.jpg" alt="Vladimir" class="img-fluid" style="filter: grayscale(0.7);">
+            <img src="images/me.jpg" alt="Vladimir" class="img-fluid thumb-post" style="filter: grayscale(0.7);">
         </div>
-        <div class="col-sm-8 col-xs-12">
+        <div class="col-sm-8 col-xs-12 text-center text-sm-start">
             <h1>Vladimir Khramov</h1>
             <h2>Backend Engineer at <a href="https://team.bumble.com/" target="_blank">Bumble</a>, Dubai, UAE</h2>
             <div class="py-2">
